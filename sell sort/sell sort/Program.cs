@@ -8,8 +8,7 @@ namespace shell_sort
 {
     class Program
     {
-
-
+       
         public static void showing(int[] a)  //showing what is going in there!
         {
             for (int x = 0; x < a.Length; x++)
