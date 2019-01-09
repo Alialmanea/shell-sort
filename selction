@@ -1,0 +1,62 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace selection_sort
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] a = new int[10];
+            Random rnd = new Random();
+
+            for (int i = 0; i < 10; i++)
+                a[i] = rnd.Next(1,20);
+
+            //show it befor be sorted by selection sort algorithm
+
+            Console.WriteLine("The array befor be sorted by selection sort algorithm");
+            for (int i = 0; i < 10; i++)
+                Console.Write("|"+a[i]+"|");
+
+            int min; int temp, swap;
+            for (int i = 0; i < a.Length; i++)
+            {      min = i; temp = a[i];
+                for (int j = i + 1; j < a.Length - 1; j++)
+                {
+                    if (a[min] > a[j])
+                        min = j;
+                }
+                swap = a[min];
+                a[min] = a[i];
+                a[i] = swap;
+
+
+            }
+
+            Console.WriteLine();
+            Console.WriteLine(); Console.WriteLine(); Console.WriteLine();
+            Console.WriteLine(" The array after be sorted by selection sort algorithm");
+
+
+            //show it after be sorted by selection sort algorithm
+            for (int i = 0; i < 10; i++)
+                Console.Write("|" + a[i] + "|");
+
+
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
+
+
+            Console.WriteLine("                                  Ali Rashad </>");
+
+            Console.ReadLine();
+
+        }
+    }
+}
